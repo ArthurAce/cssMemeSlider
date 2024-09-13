@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+    height: 100vh;
+    background-color: #ffecd1;
+    
+}
+
+.slider {
+    position: relative;
+    width: 65%;
+    //padding-top: 56.25%;
+    //aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.377);
+}
+
+.slides {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    transition: transform 0.6s ease;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    img {
+        //object-fit: cover;
+        width: 100%;
+    }
+}
+
+
+/* input[type="radio"] {
+    display: none;
+} */
+
+input {
+    display: none;
+}
+
+#slide-1:checked ~ .slides {
+    transform: translateX(0%);
+}
+
+#slide-2:checked ~ .slides {
+    transform: translateX(-25%);
+}
+
+#slide-3:checked ~ .slides {
+    transform: translateX(-50%);
+}
+
+#slide-4:checked ~ .slides {
+    transform: translateX(-75%);
+}
+
+
+.description {
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.text {
+    display: none;
+}
+
+#slide-1:checked ~ .description #text-1,
+#slide-2:checked ~ .description #text-2,
+#slide-3:checked ~ .description #text-3,
+#slide-4:checked ~ .description #text-4 {
+    display: block;
+    animation: textanimation 0.5s;
+}
+
+#slide-1:checked ~ .navigation label[for="slide-1"],
+#slide-2:checked ~ .navigation label[for="slide-2"],
+#slide-3:checked ~ .navigation label[for="slide-3"],
+#slide-4:checked ~ .navigation label[for="slide-4"] {
+    background-color: #15616d;
+}
+
+@keyframes textanimation {
+    0% {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.navigation {
+    position: absolute;
+    //margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    bottom: 10px;
+    right: 20px;
+}
+
+.navigation label {
+    width: 18px;
+    height: 8px;
+    border-radius: 25%;
+    background-color: rgba(116, 8, 8, 0.466);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    &:hover {
+    background-color: #78290f;
+    }
+    &:checked {
+        background-color: rgba(0, 77, 243, 0.774);
+    }
+}
+
+
+
+
