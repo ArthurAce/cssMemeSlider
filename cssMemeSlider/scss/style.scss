@@ -16,7 +16,7 @@ body {
 
 .slider {
     position: relative;
-    width: 65%;
+    width: 50%;
     //padding-top: 56.25%;
     //aspect-ratio: 16 / 9;
     overflow: hidden;
@@ -138,5 +138,20 @@ input {
 }
 
 
+@media (max-width: 1200px) {
+    .slider {
+        width: 80%;
+    }
+}
 
+@media (max-width: 768px) {
+    .slider {
+        width: 80%;
+    }
+}
 
+@media (max-width: 425px) {
+    .slider {
+        width: 80%;
+    }
+}

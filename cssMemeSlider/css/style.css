@@ -22,7 +22,7 @@ body {
 
 .slider {
   position: relative;
-  width: 65%;
+  width: 50%;
   overflow: hidden;
   border-radius: 5px;
   -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.377);
@@ -169,4 +169,20 @@ input {
 }
 .navigation label:checked {
   background-color: rgba(0, 77, 243, 0.774);
+}
+
+@media (max-width: 1200px) {
+  .slider {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .slider {
+    width: 80%;
+  }
+}
+@media (max-width: 425px) {
+  .slider {
+    width: 80%;
+  }
 }/*# sourceMappingURL=style.css.map */
