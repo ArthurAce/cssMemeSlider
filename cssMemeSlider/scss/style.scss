@@ -42,13 +42,12 @@ body {
     img {
         //object-fit: cover;
         width: 100%;
+        transition: 0.7s all;
+        filter: contrast(120%);
     }
 }
 
 
-/* input[type="radio"] {
-    display: none;
-} */
 
 input {
     display: none;

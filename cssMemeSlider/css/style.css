@@ -58,11 +58,12 @@ body {
 }
 .slide img {
   width: 100%;
+  -webkit-transition: 0.7s all;
+  transition: 0.7s all;
+  -webkit-filter: contrast(120%);
+          filter: contrast(120%);
 }
 
-/* input[type="radio"] {
-    display: none;
-} */
 input {
   display: none;
 }
