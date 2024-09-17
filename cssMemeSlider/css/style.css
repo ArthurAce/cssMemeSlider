@@ -90,7 +90,7 @@ input {
 #slide-3:checked ~ .box .description #text-3,
 #slide-4:checked ~ .box .description #text-4 {
   display: block;
-  animation: textanimation 0.6s;
+  animation: textanimation 0.8s;
 }
 
 #slide-1:checked ~ .navigation label[for=slide-1],
@@ -104,7 +104,7 @@ input {
 @keyframes textanimation {
   0% {
     opacity: 0;
-   transform: translateX(20px);
+   transform: translateX(80px);
   }
   100% {
     opacity: 1;
@@ -160,6 +160,11 @@ label {
     width: 80%;
   }
 }
+@media only screen and (max-width: 768px) {
+  .navigation label:focus {
+    background-color: rgb(137, 4, 163);
+  }
+  }
 @media (max-width: 565px) {
   .slider {
     width: 80%;
